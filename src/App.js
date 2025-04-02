@@ -37,7 +37,7 @@ function App() {
         }
       ]}
     />
-      <div className="absolute top-0 left-0 w-full z-10">
+      <div className="absolute top-0 left-0 w-full z-30">
         <Navbar />
       </div>
       <div className="w-full h-full">

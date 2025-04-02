@@ -10,7 +10,7 @@ export default function Navbar()
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-slate-400 items-center">About</div>
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-slate-400 items-center">Portfolio</div>
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-slate-400 items-center">Contact</div>
-            <div className=" w-1/6 rounded-3xl h-3/4 text-lg font-medium flex justify-center p-3 ml-10 bg-[#754ef9] items-center text-white">Download CV</div>
+            <div className=" w-1/6 rounded-3xl h-3/4 text-lg font-normal flex justify-center p-3 ml-10 bg-[#754ef9] items-center text-white">Download CV</div>
             </div>
         </div>
     );
