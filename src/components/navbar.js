@@ -5,7 +5,7 @@ export default function Navbar()
             <div className=" w-1/3 h-full bg-black flex justify-end text-center">
             <p className="h-full text-white font-semibold text-2xl flex items-center p-2">Chirag Bansal</p>
             </div>
-            <div className=" w-2/3 h-full flex items-center">
+            <div className=" w-2/3 h-full flex items-center bg-white">
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-slate-400 items-center">Home</div>
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-slate-400 items-center">About</div>
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-slate-400 items-center">Portfolio</div>
