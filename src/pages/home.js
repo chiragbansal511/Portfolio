@@ -1,13 +1,14 @@
-import Backgroundanimation from "./backgroundanimation";
-import Trianglemodule2 from "./tiranglemodule2/trianglemodule2";
-import Trianglemodule from "./trianglemodule/trianglemodule";
+import Backgroundanimation from "../components/backgroundanimation";
+import Trianglemodule2 from "../components/tiranglemodule2/trianglemodule2";
+import Trianglemodule from "../components/trianglemodule/trianglemodule";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import email from "../assets/email.png";
+import Sidepattern from "../components/sidepattern";
 
 export default function Home() {
     return (
-        <div className="relative w-full h-full flex justify-center">
+        <div id="home" className="relative w-full h-full flex justify-center items-center">
             <div className="absolute z-20 w-2/4 flex justify-start"><div className="rotate-90"><Trianglemodule2 /></div></div>
             <div className="absolute z-20 w-2/4 flex justify-start px-6 py-10"><div className="rotate-90"><Trianglemodule /></div></div>
             <div className="flex h-full w-full bg-green-100">
@@ -23,7 +24,7 @@ export default function Home() {
                     </div>
                     </div>
 
-                    <div className=" p-4 self-end absolute bottom-4 flex items-center justify-evenly">
+                    <div className=" p-4 self-end absolute bottom-2 flex items-center justify-evenly">
                         <div className=" w-1/2 font-medium text-[#a3a2a5] font-inter">FOLLOW ME ON :</div>
                         <div className="bg-[#754ef9] w-14 h-0.5 rounded-2xl "></div>
                         <div className=" w-32 h-4 flex justify-evenly">
@@ -34,6 +35,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className=" absolute z-30 right-5"><Sidepattern/></div>
         </div>
     );
 }
