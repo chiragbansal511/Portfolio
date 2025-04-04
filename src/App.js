@@ -4,6 +4,7 @@ import AnimatedCursor from "react-animated-cursor"
 import Aboutus from "./pages/aboutus";
 import Skills from "./pages/skills";
 import Myexperience from "./pages/myexperience";
+import Contactus from "./pages/contactus";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         <Skills />
         <Aboutus/>
         <Myexperience />
+        <Contactus />
       </div>
     </div>
    

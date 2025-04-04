@@ -14,7 +14,7 @@ export default function Navbar()
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("aboutus")}>About</div>
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("skills")}>Skills</div>
             <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("experiencecard")}>Experience</div>
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("home")}>Contact</div>
+            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("contactus")}>Contact</div>
             <div className=" w-1/6 rounded-3xl h-3/4 text-lg font-normal flex justify-center p-3 ml-10 bg-[#754ef9] items-center text-white font-inter">Download CV</div>
             </div>
         </div>
