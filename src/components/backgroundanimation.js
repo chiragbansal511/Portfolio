@@ -52,7 +52,7 @@ function Backgroundanimation() {
       },
       number: {
         density: { enable: true, area: 1080 },
-        value: 300,
+        value: 500,
       },
       opacity: {
         value: { min: 0.1, max: 0.5 },

@@ -8,8 +8,8 @@ import Contactus from "./pages/contactus";
 
 function App() {
   return (
-    <div className="relative w-full h-screen"> 
-    {/* <AnimatedCursor
+    <div className=" w-full h-screen">
+      {/* <AnimatedCursor
   innerSize={5}
   outerSize={40}
   color="117, 78, 249"
@@ -47,13 +47,13 @@ function App() {
       </div>
       <div className="w-full h-full">
         <Home />
-        <Skills />
+        {/* <Skills />
         <Aboutus/>
         <Myexperience />
-        <Contactus />
+        <Contactus /> */}
       </div>
     </div>
-   
+
   );
 }
 

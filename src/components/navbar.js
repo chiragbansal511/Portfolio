@@ -1,23 +1,85 @@
-export default function Navbar()
-{   
+import { useEffect, useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
+export default function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const scrollToSection = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        setMenuOpen(false); // Close menu after scroll
     };
 
-    return(
-        <div className=" w-full h-14 flex">
+    // ✅ Prevent background scroll on mobile menu open
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        // Cleanup on component unmount
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [menuOpen]);
+
+    return (
+        <div className="w-full h-14 flex items-center justify-between bg-white md:bg-transparent z-50 relative pr-4">
+            {/* Logo */}
             <div className=" w-1/3 h-full bg-black flex justify-end text-center">
             <p className="h-full text-white font-semibold text-2xl flex items-center p-2 font-merriweather ">Chirag Bansal</p>
             </div>
-            <div className=" w-2/3 h-full flex items-center bg-white">
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("home")}>Home</div>
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("skills")}>Skills</div>
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("aboutus")}>About</div>
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("experiencecard")}>Experience</div>
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("experiencecard")}>Projects</div>
-            <div className=" h-full text-base font-medium flex justify-center p-3 ml-6 text-[#a3a2a5] items-center font-inter hover:text-black hover:underline transition-all ease-linear delay-100" onClick={() => scrollToSection("contactus")}>Contact</div>
-            <div className=" w-1/6 rounded-3xl h-3/4 text-lg font-normal flex justify-center p-3 ml-10 bg-[#754ef9] items-center text-white font-inter">Download CV</div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex w-2/3 h-full items-center justify-end">
+                {["home", "skills", "aboutus", "experiencecard", "projects", "contactus"].map((section, idx) => (
+                    <div
+                        key={idx}
+                        className="cursor-pointer text-base font-medium mx-3 text-[#a3a2a5] hover:text-black hover:underline transition-all ease-linear"
+                        onClick={() => scrollToSection(section)}
+                    >
+                        {section.charAt(0).toUpperCase() + section.slice(1)}
+                    </div>
+                ))}
+                <div className="ml-10 px-4 py-2 rounded-3xl bg-[#754ef9] text-white font-inter text-base cursor-pointer">
+                    Download CV
+                </div>
             </div>
+
+            {/* Mobile Menu Icon */}
+            <div className="md:hidden">
+                {menuOpen ? (
+                    <FiX
+                        size={28}
+                        onClick={() => setMenuOpen(false)}
+                        className="text-black cursor-pointer"
+                    />
+                ) : (
+                    <FiMenu
+                        size={28}
+                        onClick={() => setMenuOpen(true)}
+                        className="text-black cursor-pointer"
+                    />
+                )}
+            </div>
+
+            {/* Fullscreen Mobile Menu */}
+            {menuOpen && (
+                <div className="fixed inset-0 bg-white flex flex-col justify-center items-center z-50 gap-8 text-xl font-inter">
+                    {["home", "skills", "aboutus", "experiencecard", "projects", "contactus"].map((section, idx) => (
+                        <div
+                            key={idx}
+                            className="text-[#754ef9] hover:text-black cursor-pointer transition-all"
+                            onClick={() => scrollToSection(section)}
+                        >
+                            {section.charAt(0).toUpperCase() + section.slice(1)}
+                        </div>
+                    ))}
+                    <div className="mt-8 px-6 py-3 bg-[#754ef9] text-white rounded-3xl text-lg cursor-pointer">
+                        Download CV
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -21,7 +21,7 @@ export default function Skills() {
             </div>
 
             {/* Skill Categories */}
-            <div className=" z-30 w-full h-16 flex justify-evenly ">
+            <div className=" z-30 w-full h-16 flex max-[1300px]:flex-wrap justify-evenly ">
                 {Object.keys(skills).map((category, index) => (
                     <div
                         key={index}

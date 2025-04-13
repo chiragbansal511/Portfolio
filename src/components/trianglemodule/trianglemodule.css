@@ -1,36 +1,52 @@
 @property --r {
-    syntax: "<length>";
-    initial-value: 0px;
-    inherits: true;
-  }
-  
-  .triangle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 88vh;
-    /* background: radial-gradient(circle, #8A9B0F, #9DE0AD); */
-  }
-  
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: true;
+}
+
+.triangle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+  /* background: radial-gradient(circle, #8A9B0F, #9DE0AD); */
+}
+
+.tri {
+  --r: 2.2vw; /* Responsive radius based on viewport width */
+
+  width: 40vw;
+  max-width: 450px;
+  min-width: 220px;
+  aspect-ratio: 1 / cos(30deg);
+
+  --_g: calc(tan(60deg) * var(--r)) bottom var(--r), #000 98%, #0000 101%;
+
+  -webkit-mask:
+    conic-gradient(from -30deg at 50% calc(200% - 3 * var(--r) / 2), #000 60deg, #0000 0)
+      0 100% / 100% calc(100% - 3 * var(--r) / 2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(2 * var(--r)), #000 98%, #0000 101%),
+    radial-gradient(var(--r) at left var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transition: --r 0.6s;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.tri:hover {
+  --r: 1vw; /* Smaller radius on hover for responsive shrinking */
+}
+
+/* Optional: Additional tweaks for very small screens */
+@media (max-width: 500px) {
   .tri {
-    --r: 40px; /* the radius */
-    
-    width: 450px;
-    aspect-ratio: 1/cos(30deg);
-    --_g:calc(tan(60deg)*var(--r)) bottom var(--r), #000 98%, #0000 101%;
-    -webkit-mask:
-      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2), #000 60deg, #0000 0)
-        0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
-      radial-gradient(var(--r) at 50% calc(2*var(--r)), #000 98%, #0000 101%),
-      radial-gradient(var(--r) at left  var(--_g)),
-      radial-gradient(var(--r) at right var(--_g));
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    transition: --r .6s;
-    cursor: pointer;
-    object-fit: cover;
+    width: 60vw;
+    --r: 6vw;
   }
-  
+
   .tri:hover {
-    --r: 10px;
+    --r: 3vw;
   }
-  
+}
