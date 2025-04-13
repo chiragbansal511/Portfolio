@@ -1,7 +1,7 @@
 export default function Contactus()
 {
     return (
-        <div id="contactus" className=" w-full h-64 bg-black">
+        <div id="contactus" className=" w-full h-72 bg-black">
             <div className=" w-full h-3/4 flex justify-evenly items-center px-10">
               <div className=" w-1/6 h-full">
               <div className=" mt-5 font-montserrat text-white font-semibold text-xl text-center">Chirag Bansal</div>
@@ -19,10 +19,10 @@ export default function Contactus()
               </div>
               <div className=" w-1/6 h-full ">
               <div className=" mt-5 font-montserrat text-white font-semibold text-xl text-center">Get in touch</div>
-              <div className=" font-inter text-white font-normal text-sm text-center p-6">40 Tara Estate<br /> Abohar</div>
+              <div className=" font-inter text-white font-normal text-sm text-center p-6">40 Tara Estate ,<br /> Abohar</div>
               </div>
             </div>
-            <div className=" w-full h-1/4  flex justify-between items-center">
+            <div className=" w-full h-1/4  flex justify-between items-center border-y border-[#a3a2a5]">
             <div className=" w-1/4 h-full flex justify-end items-center font-inter font-normal text-lg text-white">All Right Reserved</div>
             <div className=" w-1/4 h-full  flex justify-start items-center">
             <img src="https://img.icons8.com/color/480/linkedin.png" className=" w-10 h-10  mr-3"/>

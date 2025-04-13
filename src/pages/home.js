@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <div id="home" className="relative w-full h-full flex justify-center items-center">
             <div className="absolute z-20 w-2/4 flex justify-start"><div className="rotate-90"><Trianglemodule2 /></div></div>
-            <div className="absolute z-20 w-2/4 flex justify-start px-6 py-10"><div className="rotate-90"><Trianglemodule /></div></div>
+            <div className="absolute z-20 w-2/4 flex justify-start px-7 py-14 mt-20"><div className="rotate-90"><Trianglemodule /></div></div>
             <div className="flex h-full w-full bg-green-100">
                 <div className="w-1/3 h-full bg-black z-0"><Backgroundanimation /></div>
                 <div className="w-2/3 h-full z-10 bg-white flex flex-col justify-center items-center">
