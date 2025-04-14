@@ -47,9 +47,9 @@ function App() {
       </div>
       <div className="w-full h-full">
         <Home />
-        {/* <Skills />
+        <Skills />
         <Aboutus/>
-        <Myexperience />
+        {/* <Myexperience />
         <Contactus /> */}
       </div>
     </div>

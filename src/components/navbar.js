@@ -26,8 +26,8 @@ export default function Navbar() {
     return (
         <div className="w-full h-14 flex items-center justify-between bg-white md:bg-transparent z-50 relative pr-4">
             {/* Logo */}
-            <div className=" w-1/3 h-full bg-black flex justify-end text-center">
-            <p className="h-full text-white font-semibold text-2xl flex items-center p-2 font-merriweather ">Chirag Bansal</p>
+            <div className=" w-1/3 h-full bg-black flex justify-end text-center max-[1300px]:justify-center">
+            <p className="h-full text-white font-semibold text-2xl flex items-center p-2 font-merriweather max-[1300px]:text-base max-[1300px]:font-medium max-[1300px]:text-center">Chirag Bansal</p>
             </div>
 
             {/* Desktop Menu */}
@@ -75,7 +75,7 @@ export default function Navbar() {
                             {section.charAt(0).toUpperCase() + section.slice(1)}
                         </div>
                     ))}
-                    <div className="mt-8 px-6 py-3 bg-[#754ef9] text-white rounded-3xl text-lg cursor-pointer">
+                    <div className=" max-[1300px]:animate-pulse mt-8 px-6 py-3 bg-[#754ef9] text-white rounded-3xl text-lg cursor-pointer">
                         Download CV
                     </div>
                 </div>

@@ -49,4 +49,8 @@
   .tri:hover {
     --r: 3vw;
   }
+
+  .triangle-container {
+    height: 70vw;
+  }
 }
