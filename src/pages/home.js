@@ -6,11 +6,34 @@ import linkedin from "../assets/linkedin.png";
 import email from "../assets/email.png";
 import Sidepattern from "../components/sidepattern";
 
+const width = window.innerWidth;
+const height = window.innerHeight;
+
 export default function Home() {
     return (
         <div id="home" className="w-full h-full flex justify-center items-center">
-            <div className="absolute z-20 w-2/4 flex justify-start  max-[1300px]:top-20"><div className="rotate-90"><Trianglemodule2 /></div></div>
-            <div className="absolute z-20 w-2/4 flex justify-start px-7 max-[1300px]:px-5 py-14 max-[1300px]:py-16 mt-20 max-[1300px]:-mt-5  max-[1300px]:top-16"><div className="rotate-90"><Trianglemodule /></div></div>
+            <div className="absolute z-20 w-2/4 flex justify-start  max-[1300px]:top-[var(--my-top)]" ><div className="rotate-90"><Trianglemodule2 /></div>
+                <style>
+                    {`
+      :root {
+        --my-top: 0rem;
+      }
+
+      @media (max-width: 1300px) {
+        :root {
+          --my-top: 17vh; /* same as Tailwind's top-20 */
+        }
+      }
+
+      @media (max-height: 670px) {
+        :root {
+          --my-top: 10vh; /* same as Tailwind's top-20 */
+        }
+      }
+    `}
+                </style>
+            </div>
+            <div className="absolute z-20 w-2/4 flex justify-start px-7 max-[1300px]:px-5 py-14 max-[1300px]:py-16 mt-20 max-[1300px]:-mt-5  max-[1300px]:top-[var(--my-top)]"><div className="rotate-90"><Trianglemodule /></div></div>
             <div className="flex h-full w-full bg-green-100 max-[1300px]:flex-col">
                 <div className="w-1/3 h-full bg-black z-0 max-[1300px]:w-full max-[1300px]:h-1/3"><Backgroundanimation /></div>
                 <div className="max-[1300px]:w-full max-[1300px]:h-2/3 w-2/3 h-full z-10 bg-white flex flex-col justify-center items-center">
