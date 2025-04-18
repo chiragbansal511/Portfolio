@@ -2,8 +2,29 @@ import Sidepattern from "../components/sidepattern";
 
 export default function Aboutus() {
     return (
-        <div id="aboutus" className="w-full h-full -mt-8 max-[1300px]:mt-60 flex max-[1300px]:flex-col justify-center items-center relative">
+        <div id="aboutus" className="w-full h-full -mt-8 max-[1300px]:mt-[var(--my-top2)] flex max-[1300px]:flex-col justify-center items-center relative">
             {/* Left Section */}
+
+            <style>
+                    {`
+      :root {
+        --my-top2: 0rem;
+      }
+
+      @media (max-height: 1300px) {
+        :root {
+          --my-top2: 5vh; /* same as Tailwind's top-20 */
+        }
+      }
+
+      @media (max-height: 670px) {
+        :root {
+          --my-top2: 40vh; /* same as Tailwind's top-20 */
+        }
+      }
+    `}
+                </style>
+
             <div className="w-2/6 max-[1300px]:w-full h-full max-[1300px]:h-2/3 bg-white flex flex-col justify-center p-10 text-white">
                 <div className=" w-40 max-[1300px]:w-28 text-[#754ef9] rounded-3xl text-lg max-[1300px]:text-base flex justify-center items-center font-normal bg-[#f1edfe] py-2 mb-5 font-inter">ABOUT ME</div>
                 
