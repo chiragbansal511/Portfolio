@@ -49,8 +49,8 @@ function App() {
         <Home />
         <Skills />
         <Aboutus/>
-        {/* <Myexperience />
-        <Contactus /> */}
+        {/* <Myexperience /> */}
+        <Contactus />
       </div>
     </div>
 
