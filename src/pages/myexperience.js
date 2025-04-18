@@ -18,8 +18,8 @@ export default function Myexperience()
         </div>
 
         {/* Skill Items */}
-        <div className=" z-30 w-full h-4/6 flex justify-center items-center">
-            <Sidepattern/>
+        <div className=" z-30 w-full h-4/6 flex  max-[1300px]:flex-col justify-center items-center">
+            <div className=" max-[1300px]:hidden"><Sidepattern/></div>
             <Experiencecard />
             <Experiencecard />
             <Experiencecard />

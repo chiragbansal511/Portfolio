@@ -49,7 +49,7 @@ function App() {
         <Home />
         <Skills />
         <Aboutus/>
-        {/* <Myexperience /> */}
+        <Myexperience />
         <Contactus />
       </div>
     </div>
