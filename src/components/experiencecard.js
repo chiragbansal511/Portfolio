@@ -5,7 +5,7 @@ export default function Experiencecard() {
     const [color , setColor] = useState("#754ef9");
 
     return (
-        <div id="experiencecard" onMouseEnter={()=>setColor("white")} onMouseLeave={()=>setColor("#754ef9")} className="h-full w-80 bg-white shadow-2xl ml-6 flex flex-col justify-center items-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-3xl hover:bg-[#754ef9] hover:text-white">
+        <div id="experiencecard" onMouseEnter={()=>setColor("white")} onMouseLeave={()=>setColor("#754ef9")} className="h-full w-80 max-[1300px]:w-full max-[1300px]:h-50 bg-white shadow-2xl max-[1300px]:shadow-xl ml-6 max-[1300px]:ml-0 max-[1300px]:mb-10 flex flex-col justify-center items-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-3xl hover:bg-[#754ef9] hover:text-white">
             {/* Profile Image Placeholder */}
             <div className="w-32 h-32 rounded-full border-2" style={{borderColor : `${color}`}}></div>
 
@@ -27,7 +27,7 @@ export default function Experiencecard() {
             </div>
 
             {/* Download Button */}
-            <div className="w-3/6 rounded-3xl h-10 text-lg font-normal flex justify-center items-center font-inter cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#5c3fc9] hover:scale-105" style={{backgroundColor : `${color}` , color : color=="white" ? "#754ef9" : "white"}}>
+            <div className="w-3/6 rounded-3xl h-10 text-lg font-normal flex justify-center items-center font-inter cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#5c3fc9] hover:scale-105 max-[1300px]:mb-5" style={{backgroundColor : `${color}` , color : color=="white" ? "#754ef9" : "white"}}>
                Read More
             </div>
         </div>

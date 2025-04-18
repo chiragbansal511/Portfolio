@@ -4,7 +4,7 @@ import Sidepattern from "../components/sidepattern";
 export default function Myexperience()
 {
     return (
-        <div className="w-full h-full bg-white flex flex-col justify-center items-center">
+        <div className="w-full h-full max-[1300px]:h-fit bg-white flex flex-col justify-center items-center">
         {/* Skills Heading */}
         <div className="w-full h-16 flex justify-center items-center">
             <div className="w-40 text-[#754ef9] rounded-3xl text-lg flex justify-center items-center font-normal bg-[#f1edfe] py-2 mb-5 font-inter px-2">
