@@ -1,15 +1,17 @@
 import Home from "./pages/home";
 import Navbar from "./components/navbar";
-// import AnimatedCursor from "react-animated-cursor"
+import AnimatedCursor from "react-animated-cursor"
+// import { emojiCursor } from "cursor-effects";
 import Aboutus from "./pages/aboutus";
 import Skills from "./pages/skills";
 import Myexperience from "./pages/myexperience";
 import Contactus from "./pages/contactus";
+import Projects from "./pages/projects";
 
 function App() {
   return (
     <div className=" w-full h-screen">
-      {/* <AnimatedCursor
+      <AnimatedCursor
   innerSize={5}
   outerSize={40}
   color="117, 78, 249"
@@ -40,7 +42,7 @@ function App() {
       }
     }
   ]}
-/> */}
+/>
 
       <div className="absolute top-0 left-0 w-full z-30">
         <Navbar />
@@ -49,6 +51,7 @@ function App() {
         <Home />
         <Skills />
         <Aboutus/>
+        <Projects />
         <Myexperience />
         <Contactus />
       </div>

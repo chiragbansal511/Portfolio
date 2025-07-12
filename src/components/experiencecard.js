@@ -6,6 +6,8 @@ export default function Experiencecard() {
 
     return (
         <div id="experiencecard" onMouseEnter={()=>setColor("white")} onMouseLeave={()=>setColor("#754ef9")} className="h-full w-80 max-[1300px]:w-full max-[1300px]:h-50 bg-white shadow-2xl max-[1300px]:shadow-xl ml-6 max-[1300px]:ml-0 max-[1300px]:mb-10 flex flex-col justify-center items-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-3xl hover:bg-[#754ef9] hover:text-white">
+        
+
             {/* Profile Image Placeholder */}
             <div className="w-32 h-32 rounded-full border-2" style={{borderColor : `${color}`}}></div>
 
