@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import Navbar from "./components/navbar";
 import AnimatedCursor from "react-animated-cursor";
+import ErrorBoundary from "./components/errorboundaries";
 
 // Lazy load all page components
 const Home = lazy(() => import("./pages/home"));
@@ -59,12 +60,12 @@ function App() {
 
       <div className="w-full h-full">
         <Suspense fallback={<Loader />}>
-          <Home />
-          <Skills />
-          <Aboutus />
-          <Projects />
-          <Myexperience />
-          <Contactus />
+          <ErrorBoundary><Home /></ErrorBoundary>
+           <ErrorBoundary><Skills /></ErrorBoundary>
+           <ErrorBoundary><Aboutus /></ErrorBoundary>
+           <ErrorBoundary><Projects /></ErrorBoundary>
+           <ErrorBoundary><Myexperience /></ErrorBoundary>
+           <ErrorBoundary><Contactus /></ErrorBoundary>
         </Suspense>
       </div>
     </div>
