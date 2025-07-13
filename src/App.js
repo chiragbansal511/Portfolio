@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import Navbar from "./components/navbar";
-import AnimatedCursor from "react-animated-cursor";
 import ErrorBoundary from "./components/errorboundaries";
+import CustomCursor from "./components/cursor";
 
 // Lazy load all page components
 const Home = lazy(() => import("./pages/home"));
@@ -21,39 +21,7 @@ const Loader = () => (
 function App() {
   return (
     <div className="w-full h-screen">
-      <AnimatedCursor
-        innerSize={5}
-        outerSize={40}
-        color="117, 78, 249"
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={2}
-        clickables={[
-          'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
-          'button',
-          '.link',
-          {
-            target: '.custom',
-            options: {
-              innerSize: 5,
-              outerSize: 5,
-              color: '117, 78, 249',
-              outerAlpha: 0.2,
-              innerScale: 0.2,
-              outerScale: 2
-            }
-          }
-        ]}
-      />
-
+      <CustomCursor />
       <div className="absolute top-0 left-0 w-full z-30">
         <Navbar />
       </div>
@@ -61,11 +29,11 @@ function App() {
       <div className="w-full h-full">
         <Suspense fallback={<Loader />}>
           <ErrorBoundary><Home /></ErrorBoundary>
-           <ErrorBoundary><Skills /></ErrorBoundary>
-           <ErrorBoundary><Aboutus /></ErrorBoundary>
-           <ErrorBoundary><Projects /></ErrorBoundary>
-           <ErrorBoundary><Myexperience /></ErrorBoundary>
-           <ErrorBoundary><Contactus /></ErrorBoundary>
+          <ErrorBoundary><Skills /></ErrorBoundary>
+          <ErrorBoundary><Aboutus /></ErrorBoundary>
+          <ErrorBoundary><Projects /></ErrorBoundary>
+          <ErrorBoundary><Myexperience /></ErrorBoundary>
+          <ErrorBoundary><Contactus /></ErrorBoundary>
         </Suspense>
       </div>
     </div>

@@ -7,7 +7,7 @@ export default function Projectcard() {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full h-full flex flex-col justify-end hover:bg-orange-300 transition-all duration-500 grayscale hover:grayscale-0"
+      className=" w-full h-full flex flex-col justify-end transition-all duration-500 grayscale hover:grayscale-0"
       style={{
         backgroundImage: `url('https://cdn.prod.website-files.com/5e6bef9160e290b99b7644b5/63e4ba3649397b3b0e246d8c_Essayservice%20_%20What%20is%20Capstone%20Project_.png')`,
         backgroundSize: "cover",
