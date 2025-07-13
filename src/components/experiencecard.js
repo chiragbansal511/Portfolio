@@ -9,7 +9,7 @@ export default function Experiencecard() {
         
 
             {/* Profile Image Placeholder */}
-            <div className="w-32 h-32 rounded-full border-2" style={{borderColor : `${color}`}}></div>
+            <div className=" max-[1300px]:mt-4 w-32 h-32 rounded-full border-2" style={{borderColor : `${color}`}}></div>
 
             {/* Title */}
             <div className="w-full h-8 text-center font-montserrat text-xl font-black mt-4">

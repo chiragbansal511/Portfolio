@@ -12,9 +12,9 @@ export default function Skills() {
     };
 
     return (
-        <div id="skills" className="w-full h-screen bg-white flex flex-col justify-center items-center mb-16">
+        <div id="skills" className="w-full h-fit flex flex-col justify-center items-center mt-10">
             {/* Skills Heading */}
-            <div className="w-full h-1/6 flex justify-center items-center">
+            <div className="w-full h-16 mb-5 flex justify-center items-center">
                 <div className="w-40 max-[1300px]:w-28 text-[#754ef9] rounded-3xl text-lg max-[1300px]:text-base flex justify-center items-center font-normal bg-[#f1edfe] py-2 mb-5 font-inter">
                     MY SKILLS   
                 </div>
@@ -35,15 +35,15 @@ export default function Skills() {
             </div>
 
             {/* Skill Items */}
-            <div className=" z-30 w-full h-5/6 flex justify-center ">
-                <div className=" w-11/12 h-full bg-white flex flex-wrap justify-center">
+            <div className=" z-30 w-full h-fit flex justify-center ">
+                <div className=" w-11/12 max-[1300px]:w-full h-fit bg-white flex flex-wrap justify-center">
                     {Object.entries(skills).map(([category, techs]) =>
                         techs.map((tech, index) => (
                             <img
                                 key={index}
                                 src={tech}
                                 alt={`Skill ${index}`}
-                                className={` p-4 max-[1300px]:p-2 w-40 h-40 m-4 max-[1300px]:h-20 max-[1300px]:w-20 object-contain transition-all duration-300 ease-in-out
+                                className={` p-4 max-[1300px]:p-2 w-36 h-36 m-4 max-[1300px]:h-20 max-[1300px]:w-20 object-contain transition-all duration-300 ease-in-out
                                     ${hoveredCategory === null || hoveredCategory === category
                                         ? "scale-105"
                                         : "opacity-40"}`}

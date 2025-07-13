@@ -15,11 +15,11 @@ export default function Myexperience()
 
         {/* Skill Categories */}
         <div className=" z-30 w-full h-16 flex justify-evenly ">
-        <div className="text-3xl max-[1300px]:text-2xl font-medium text-[#a3a2a5] px-4 font-inter ">My Professional Journey</div>
+        <div className="text-xl max-[1300px]:text-lg font-medium text-[#a3a2a5] px-4 font-inter ">My Professional Journey</div>
         </div>
 
         {/* Skill Items */}
-        <div className=" z-30 w-full h-4/6 flex  max-[1300px]:flex-col justify-center items-center">
+        <div className=" z-30 w-4/5 h-4/6 flex  max-[1300px]:flex-col justify-center items-center">
             <div className=" max-[1300px]:hidden"><Sidepattern/></div>
             <Experiencecard />
             <Experiencecard />
