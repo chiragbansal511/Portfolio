@@ -7,7 +7,6 @@ import email from "../assets/email.png";
 import Sidepattern from "../components/sidepattern";
 import { TypeAnimation } from 'react-type-animation';
 
-
 const width = window.innerWidth;
 const height = window.innerHeight;
 
@@ -46,13 +45,13 @@ export default function Home() {
               <TypeAnimation
                 sequence={[
                   // Same substring at the start will only be typed once, initially
-                  'We produce food for Mice',
+                  'I build scalable web apps',
                   1000,
-                  'We produce food for Hamsters',
+                  'I turn ideas into products',
                   1000,
-                  'We produce food for Guinea Pigs',
+                  'I engineer seamless user experiences',
                   1000,
-                  'We produce food for Chinchillas',
+                  'I optimize performance & uptime',
                   1000,
                 ]}
                 speed={50}
@@ -63,7 +62,7 @@ export default function Home() {
             </div>
             <div className=" flex max-[1300px]:justify-center">
               <div className=" w-40 h-10 mt-10 border-2 mr-6 rounded-3xl flex justify-center text-center items-center text-lg text-slate-500  font-inter max-[1300px]:text-base">Get Started</div>
-              <div className=" w-40 h-10 mt-10 border-2 rounded-3xl bg-[#754ef9] flex justify-center items-center text-white text-lg animate-bounce font-inter max-[1300px]:text-base">View Portfolio</div>
+              <div className=" w-40 h-10 mt-10 border-2 rounded-3xl bg-[#754ef9] flex justify-center items-center text-white text-lg animate-bounce font-inter max-[1300px]:text-base">ProfileGPT</div>
             </div>
           </div>
 

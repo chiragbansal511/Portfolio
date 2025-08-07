@@ -13,8 +13,7 @@
 }
 
 .tri {
-  --r: 2.2vw; /* Responsive radius based on viewport width */
-
+  --r: 2.2vw;
   width: 40vw;
   max-width: 450px;
   min-width: 220px;
@@ -32,8 +31,19 @@
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transition: --r 0.6s;
   cursor: pointer;
+
+  /* Image display handling */
   object-fit: cover;
+  object-position: center top; /* aligns top of image */
+  /* transform: translateY(18%); */
+  /* transform: translateX(12%); */
+    /* moves image down */
+  display: block;
+  background-image: url("../../assets/chirag_bansal_profile.jpg");
+  background-size: contain;
+  background-position: 8vh 4vw;
 }
+
 
 .tri:hover {
   --r: 1vw; /* Smaller radius on hover for responsive shrinking */

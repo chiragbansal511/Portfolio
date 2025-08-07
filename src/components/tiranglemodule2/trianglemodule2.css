@@ -4,7 +4,7 @@
     inherits: true;
   }
   
-  .triangle-container {
+  .tri2angle-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     /* background: radial-gradient(circle, #8A9B0F, #9DE0AD); */
   }
   
-  .tri {
+  .tri2 {
     --r: 40px; /* the radius */
     
     width: 450px;
@@ -30,7 +30,7 @@
     object-fit: cover;
   }
   
-  .tri:hover {
+  .tri2:hover {
     --r: 10px;
   }
   
