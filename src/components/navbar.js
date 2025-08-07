@@ -80,9 +80,14 @@ export default function Navbar() {
                             {section.charAt(0).toUpperCase() + section.slice(1)}
                         </div>
                     ))}
-                    <div className=" max-[1300px]:animate-pulse mt-8 px-6 py-3 bg-[#754ef9] text-white rounded-3xl text-lg cursor-pointer">
+                    <a
+                        href="/Chirag_Bansal_Resume.pdf"
+                        download
+                        className="max-[1300px]:animate-pulse mt-8 px-6 py-3 bg-[#754ef9] text-white rounded-3xl text-lg cursor-pointer"
+                    >
                         Download CV
-                    </div>
+                    </a>
+
                 </div>
             )}
         </div>
