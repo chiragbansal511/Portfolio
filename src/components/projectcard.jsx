@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Projectcard() {
+export default function Projectcard({github , name , about}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -24,7 +24,7 @@ export default function Projectcard() {
         >
           {/* Default text */}
           <div className="h-[40px] flex items-center">
-            Lorem ipsum dolor sit amet.
+            {name}
           </div>
 
           {/* Hover link */}
@@ -43,7 +43,7 @@ export default function Projectcard() {
 
       {/* DESCRIPTION */}
       <div className="px-4 mb-2 font-montserrat w-full max-[1300px]:px-2 max-[1300px]:text-xs text-white text-sm text-justify max-[1300px]:text-left">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repudiandae dignissimos sunt eum magni perspiciatis itaque assumenda, beatae laborum deleniti?
+        {about}
       </div>
     </div>
   );

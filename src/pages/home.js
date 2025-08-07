@@ -55,13 +55,18 @@ export default function Home() {
                   1000,
                 ]}
                 speed={50}
-                style={{ fontSize: '1em' , marginLeft : '10px' ,color : '#a3a2a5'}}
+                style={{ fontSize: '1em', marginLeft: '10px', color: '#a3a2a5' }}
                 repeat={Infinity}
               />
 
             </div>
             <div className=" flex max-[1300px]:justify-center">
-              <div className=" w-40 h-10 mt-10 border-2 mr-6 rounded-3xl flex justify-center text-center items-center text-lg text-slate-500  font-inter max-[1300px]:text-base">Get Started</div>
+              <div
+                className="w-40 h-10 mt-10 border-2 mr-6 rounded-3xl flex justify-center text-center items-center text-lg text-slate-500 font-inter cursor-pointer max-[1300px]:text-base"
+                onClick={() => window.scrollBy({ top: window.innerHeight / 2, behavior: 'smooth' })}
+              >
+                Get Started
+              </div>
               <div className=" w-40 h-10 mt-10 border-2 rounded-3xl bg-[#754ef9] flex justify-center items-center text-white text-lg animate-bounce font-inter max-[1300px]:text-base">ProfileGPT</div>
             </div>
           </div>
@@ -69,10 +74,28 @@ export default function Home() {
           <div className=" p-4 self-end absolute bottom-2 flex items-center justify-evenly max-[1300px]:w-full">
             <div className=" w-1/2 font-medium text-[#a3a2a5] font-inter text-end px-4">FOLLOW ME ON :</div>
             <div className="bg-[#754ef9] w-14 h-0.5 rounded-2xl "></div>
-            <div className=" w-32 h-4 flex justify-evenly">
-              <img src={linkedin} />
-              <img src={github} />
-              <img src={email} />
+            <div className=" w-32 h-6 flex justify-evenly">
+              <img
+                src={linkedin}
+                alt="LinkedIn"
+                className="cursor-pointer"
+                onClick={() => window.open("https://www.linkedin.com/in/chirag-bansal-750275284/", "_blank")}
+              />
+
+              <img
+                src={github}
+                alt="GitHub"
+                className="cursor-pointer"
+                onClick={() => window.open("https://github.com/chiragbansal511", "_blank")}
+              />
+
+              <img
+                src={email}
+                alt="Email"
+                className="cursor-pointer"
+                onClick={() => window.location.href = "mailto:contact@chiragbansal.in"}
+              />
+
             </div>
           </div>
         </div>
